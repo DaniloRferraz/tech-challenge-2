@@ -6,9 +6,9 @@ metadata:
   labels:
     app: evaluation-service
 data:
-  REDIS_URL: "redis://clustercfg.evaluation-service-cache.nu6bxp.use1.cache.amazonaws.com:6379"
-  FLAG_SERVICE_URL: "http://flag-service-clusterip.flag-service.svc.cluster.local:8002"
-  TARGETING_SERVICE_URL: "http://targeting-service-clusterip.targeting-service.svc.cluster.local:8003"
-  SERVICE_API_KEY: "tm_key_84a97ca7cf27aae18e75422ce6ae73ded24c1c539bfada2bdec8e4535da437e7"
-  AWS_REGION: "us-east-1"
-  AWS_SQS_URL: "https://sqs.us-east-1.amazonaws.com/832200544765/analytics-service-sqs"
+  REDIS_URL: ${{ secrets.REDIS_Url }}
+  FLAG_SERVICE_URL: ${{ secrets.FLAG_URL }}
+  TARGETING_SERVICE_URL: ${{ secrets.TARGETING_URL }}
+  SERVICE_API_KEY: ${{ secrets.API_KEY }}
+  AWS_REGION: ${{ secrets.AWS_REGION }}
+  AWS_SQS_URL: ${{ secrets.AWS_SQS_URL }}
